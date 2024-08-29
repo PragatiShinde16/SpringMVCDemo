@@ -1,0 +1,5 @@
+package com.springmvc.SpringMVCProject.dao;
+
+public class LoginDao {
+
+}

@@ -1,0 +1,22 @@
+package com.springmvc.SpringMVCProject.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.springmvc.SpringMVCProject.dao.LoginDao;
+import com.springmvc.SpringMVCProject.entity.User;
+
+@Service
+public class LoginService {
+
+	@Autowired
+	LoginDao dao;
+	
+	public void loginUser(User user) {
+		// TODO Auto-generated method stub
+		
+		String msg = null;
+		User user2 = dao.loginUser(user);
+	}
+
+}

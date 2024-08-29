@@ -1,0 +1,54 @@
+package com.springmvc.SpringMVCProject.dao;
+
+import org.hibernate.query.Query;
+
+import java.util.List;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+
+import com.springmvc.SpringMVCProject.entity.Person;
+import com.springmvc.SpringMVCProject.entity.User;
+
+@Repository
+public class LoginDao {
+
+	@Autowired
+	SessionFactory factory;
+	
+	public User loginUser(User user) {
+		// TODO Auto-generated method stub
+		Session session = factory.openSession();
+		String hqlQuery = "from User where username=:myusername and password=:mypass";
+		session.beginTransaction();
+		Query<User> query = session.createQuery(hqlQuery, User.class);
+		query.setParameter("myusername", user.getUsername());
+		query.setParameter("mypass", user.getPassword());
+		User user2 = query.uniqueResult();
+		
+		session.getTransaction().commit();
+		session.close();
+		
+		return user2;
+	}
+
+	public void getAllPersonData() {
+		// TODO Auto-generated method stub
+		
+		Session session = null;
+		Transaction transaction = null;
+		List<Person> list = null;
+		
+		try {
+			session = factory.openSession();
+			session.beginTransaction();
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+		
+	}
+
+}

@@ -1,0 +1,23 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<h2>Welcome to Spring MVC Project</h2>
+	
+	<%! 
+		int cnt = 0;
+	%>
+	<%
+		cnt++;
+	%>
+	
+	<h2>Count is =<%= 
+		cnt
+	%></h2>
+</body>
+</html>

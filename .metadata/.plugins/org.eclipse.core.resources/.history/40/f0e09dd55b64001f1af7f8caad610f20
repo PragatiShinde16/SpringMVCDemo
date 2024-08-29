@@ -1,0 +1,12 @@
+package com.springmvc.SpringMVCProject.service;
+
+import com.springmvc.SpringMVCProject.entity.User;
+
+public class LoginService {
+
+	public void loginUser(User user) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

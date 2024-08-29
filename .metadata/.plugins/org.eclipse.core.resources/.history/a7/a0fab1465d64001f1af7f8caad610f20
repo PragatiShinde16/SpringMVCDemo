@@ -1,0 +1,15 @@
+package com.springmvc.SpringMVCProject.dao;
+
+import org.springframework.stereotype.Repository;
+
+import com.springmvc.SpringMVCProject.entity.User;
+
+@Repository
+public class LoginDao {
+
+	public void loginUser(User user) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

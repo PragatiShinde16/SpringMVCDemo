@@ -1,0 +1,26 @@
+package com.springmvc.SpringMVCProject.dao;
+
+import org.hibernate.query.Query;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+
+import com.springmvc.SpringMVCProject.entity.User;
+
+@Repository
+public class LoginDao {
+
+	@Autowired
+	SessionFactory factory;
+	
+	public void loginUser(User user) {
+		// TODO Auto-generated method stub
+		Session session = factory.openSession();
+		String hqlQuery = "from User where username=:myusername and password=:mypass";
+		session.beginTransaction();
+		Query<User> query = session.createQuery(hqlQuery, User.class);
+		
+	}
+
+}

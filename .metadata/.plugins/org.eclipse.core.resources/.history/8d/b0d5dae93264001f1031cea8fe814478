@@ -1,0 +1,34 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body style="text-align: center; padding:100%;">
+	<h2>Welcome to Spring MVC Project</h2>
+	
+	<%! 
+		int cnt = 0;
+	%>
+	<%
+		cnt++;
+		if(cnt % 2 == 0){
+			// out.println("Even Number");
+	%>
+	<h2 style = "color:green;">Even Number</h2>
+	<% 
+		}else{
+			// out.println("Odd Number");
+	%>
+	<h2 style = "color:red;">Odd Number</h2>
+	<% 
+		}
+	%>
+	
+	<h2>Count is =<%= 
+		cnt
+	%></h2>
+</body>
+</html>

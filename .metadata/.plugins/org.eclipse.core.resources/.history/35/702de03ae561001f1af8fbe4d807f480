@@ -1,0 +1,5 @@
+package com.springmvc.SpringMVCProject.controller;
+
+public class PageController {
+
+}

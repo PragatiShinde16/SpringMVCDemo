@@ -1,0 +1,22 @@
+package com.springmvc.SpringMVCProject.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+
+import com.springmvc.SpringMVCProject.entity.User;
+
+@Controller
+public class PageController {
+
+	@GetMapping("/")
+	public String defaultPage() {
+		return "login";
+	}
+	
+	@PostMapping("insertdata")
+	public String savePersonData(@RequestBody User user) {
+		String str = service.savePersonData(p);
+		return str;
+	}
+}

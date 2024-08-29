@@ -1,0 +1,6 @@
+spring.application.name=SpringMVCProject
+server.port = 8082
+
+
+spring.mvc.view.prefix=/WEB-INFviews/
+spring.mvc.view.suffix=.jsp

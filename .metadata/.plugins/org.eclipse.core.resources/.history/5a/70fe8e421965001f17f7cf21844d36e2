@@ -1,0 +1,12 @@
+package com.springmvc.SpringMVCProject.entity;
+
+import javax.persistence.Entity;
+
+@Entity
+public class Person {
+	
+	int id;
+	String name;
+	String email_id;
+	String mob_no;
+}
